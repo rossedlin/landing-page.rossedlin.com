@@ -1,0 +1,13 @@
+RewriteEngine On
+
+#Force SSL
+#RewriteCond %{SERVER_PORT} 80
+#RewriteCond %{REQUEST_URI}  !(.well-known|test) [NC]
+#RewriteRule ^(.*)$ https://www.rossedlin.co.uk/$1 [R,L]
+
+
+RewriteBase /
+RewriteRule ^index\.htm - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.htm [L]
