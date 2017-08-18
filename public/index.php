@@ -6,6 +6,8 @@
  * Time: 16:20
  */
 
+use \Cryslo\Core\Utils;
+
 require('../vendor/autoload.php');
 ?>
 <!DOCTYPE html>
@@ -16,9 +18,9 @@ require('../vendor/autoload.php');
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="Ross Edlin">
 
-	<title>New Age - Start Bootstrap Theme</title>
+	<title>Ross Edlin</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,11 +32,22 @@ require('../vendor/autoload.php');
 	<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
-	<!-- Plugin CSS -->
-	<link rel="stylesheet" href="device-mockups/device-mockups.min.css">
-
 	<!-- Custom styles for this template -->
-	<link href="css/new-age.min.css" rel="stylesheet">
+	<link href="css/new-age.css?v=<?= Utils::getFileModifyTime(__DIR__ . '/css/new-age.css') ?>" rel="stylesheet">
+
+	<style>
+		.img-circle
+		{
+			border-radius: 50%;
+		}
+
+		#img-ross-edlin
+		{
+			-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+			-moz-box-shadow:    0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+			box-shadow:         0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+		}
+	</style>
 
 </head>
 
@@ -42,9 +55,12 @@ require('../vendor/autoload.php');
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-	<a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-			data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+	<a class="navbar-brand" href="#page-top">Ross Edlin</a>
+	<button class="navbar-toggler navbar-toggler-right"
+			type="button" data-toggle="collapse"
+			data-target="#navbarResponsive"
+			aria-controls="navbarResponsive"
+			aria-expanded="false"
 			aria-label="Toggle navigation">
 		Menu
 		<i class="fa fa-bars"></i>
@@ -52,47 +68,42 @@ require('../vendor/autoload.php');
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
-				<a class="nav-link" href="#download">Download</a>
+				<a class="nav-link" href="http://www.cuttingweb.co.uk/" target="_blank">Main Website</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#features">Features</a>
+				<a class="nav-link" href="http://www.cuttingweb.co.uk/cv" target="_blank">C.V.</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#contact">Contact</a>
+				<a class="nav-link" href="http://www.cuttingweb.co.uk/contact" target="_blank">Contact</a>
 			</li>
 		</ul>
 	</div>
 </nav>
 
-<header class="masthead">
-	<div class="container h-100">
-		<div class="row h-100">
-			<div class="col-lg-7 my-auto">
-				<div class="header-content mx-auto">
-					<h1 class="mb-5">New Age is an app landing page that will help you beautifully showcase your new
-						mobile app, or anything else!</h1>
-					<a href="#download" class="btn btn-outline btn-xl">Start Now for Free!</a>
+<header class="masthead" style="padding: 100px 0 40px 0;">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-lg-7">
+				<div class="header-content mx-auto text-center">
+					<h1 class="mb-5">
+						I'm <span>Ross Edlin</span>, a web developer, check out my 
+						<a href="http://www.cuttingweb.co.uk/portfolio" target="_blank">portfolio here</a>
+						or have a browse of my main site.
+					</h1>
+					<a href="http://www.cuttingweb.co.uk/" target="_blank" class="btn btn-outline btn-xl">See My Main Website</a>
 				</div>
 			</div>
-			<div class="col-lg-5 my-auto">
-				<div class="device-container">
-					<div class="device-mockup iphone6_plus portrait white">
-						<div class="device">
-							<div class="screen">
-								<!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-								<img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
-							</div>
-							<div class="button">
-								<!-- You can hook the "home button" to some JavaScript events or just remove it -->
-							</div>
-						</div>
-					</div>
+			<div class="col-xs-12 col-lg-5 text-center">
+				<div class="container">
+					<img id="img-ross-edlin" class="img-responsive img-thumbnail img-circle"
+						 src="img/ross-edlin-casual-500.jpg">
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
 
+<?php /*
 <section class="download bg-primary text-center" id="download">
 	<div class="container">
 		<div class="row">
@@ -107,7 +118,9 @@ require('../vendor/autoload.php');
 		</div>
 	</div>
 </section>
+*/ ?>
 
+<?php /*
 <section class="features" id="features">
 	<div class="container">
 		<div class="section-heading text-center">
@@ -172,7 +185,9 @@ require('../vendor/autoload.php');
 		</div>
 	</div>
 </section>
+*/ ?>
 
+<?php /*
 <section class="cta">
 	<div class="cta-content">
 		<div class="container">
@@ -182,25 +197,24 @@ require('../vendor/autoload.php');
 	</div>
 	<div class="overlay"></div>
 </section>
+*/ ?>
 
 <section class="contact bg-primary" id="contact">
 	<div class="container">
-		<h2>We
-			<i class="fa fa-heart"></i>
-			new friends!</h2>
+		<h2>Connect with me</h2>
 		<ul class="list-inline list-social">
 			<li class="list-inline-item social-facebook">
 				<a href="https://www.facebook.com/rossedlin" target="_blank">
 					<i class="fa fa-facebook"></i>
 				</a>
 			</li>
-			<li class="list-inline-item icon-social-linkedin">
-				<a href="https://www.linkedin.com/in/rossedlin/">
+			<li class="list-inline-item social-linkedin">
+				<a href="https://www.linkedin.com/in/rossedlin/" target="_blank">
 					<i class="fa fa-linkedin"></i>
 				</a>
 			</li>
-			<li class="list-inline-item icon-social-github">
-				<a href="https://github.com/rossedlin/">
+			<li class="list-inline-item social-github">
+				<a href="https://github.com/rossedlin/" target="_blank">
 					<i class="fa fa-github"></i>
 				</a>
 			</li>
@@ -210,18 +224,7 @@ require('../vendor/autoload.php');
 
 <footer>
 	<div class="container">
-		<p>&copy; 2017 Start Bootstrap. All Rights Reserved.</p>
-		<ul class="list-inline">
-			<li class="list-inline-item">
-				<a href="#">Privacy</a>
-			</li>
-			<li class="list-inline-item">
-				<a href="#">Terms</a>
-			</li>
-			<li class="list-inline-item">
-				<a href="#">FAQ</a>
-			</li>
-		</ul>
+		<p>&copy; <?= date('Y') ?> <a href="http://www.cuttingweb.co.uk/" target="_blank" style="color: rgba(255, 255, 255, 0.5);">Cutting Web.</a> All Rights Reserved.</p>
 	</div>
 </footer>
 
