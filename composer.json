@@ -1,14 +1,8 @@
 {
-  "name": "rossedlin/rossedlin_www",
+  "name": "rossedlin/landing-page",
   "description": "Ross Edlin Personal Website",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/CuttingWeb/cryslo_core"
-    }
-  ],
   "require": {
-    "php": ">=5.6.4",
-    "cuttingweb/cryslo_core": "1.9.*"
+    "php": ">=7.0",
+    "rossedlin/cryslo-php": "2.3.*"
   }
 }
